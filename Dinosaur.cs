@@ -16,9 +16,7 @@ namespace Klasse
         public string SpeciesName
         {
             get { 
-                if(speciesName.Length > 0)
                     return speciesName;
-                return "";  
             }
             set { speciesName = value; }
         }
@@ -27,6 +25,11 @@ namespace Klasse
         private int shoulderHeightCm;
         private int weightKg;
         private int maxAge;
+
+        public int WeightKg { get { return weightKg; } }
+        public int MaxAge { get { return maxAge; } }
+        public int ShoulderHeightCm { get { return shoulderHeightCm; } }
+
         private int clutchSize;
 
 
@@ -45,7 +48,6 @@ namespace Klasse
             this.clutchSize = clutchSize;
             Guild = guild;
             LocomotionProfile = locomotionProfile;
-            SpeciesName = "derTutorIstSchonEinWenigQuazy";
         }
 
         ~Dinosaur() {
